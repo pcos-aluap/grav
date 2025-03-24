@@ -15,7 +15,9 @@ export const defaultTheme = {
     FONT_FAMILY: {
         'title': 'Poppins_700Bold',
         'sub_title': 'Roboto_700Bold',
-        'body': 'Roboto_400Regular'
+        'body': 'Roboto_400Regular',
+        'accent_bold': 'DancingScript_600SemiBold',
+        'accent': 'DancingScript_400Regular'
     },
 
     FONT_SIZE: {
