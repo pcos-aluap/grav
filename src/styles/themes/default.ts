@@ -1,5 +1,6 @@
 export const defaultTheme = {
     COLORS: {
+        'white': '#FFFFFF',
         'soft_peach': '#FFDAB9',
         'warm_beige': '#F5F5DC',
         'dusty_rose': '#D4A5A5',
@@ -17,7 +18,8 @@ export const defaultTheme = {
         'sub_title': 'Roboto_700Bold',
         'body': 'Roboto_400Regular',
         'accent_bold': 'DancingScript_600SemiBold',
-        'accent': 'DancingScript_400Regular'
+        'accent': 'DancingScript_400Regular',
+        'button': 'Poppins_600SemiBold'
     },
 
     FONT_SIZE: {
