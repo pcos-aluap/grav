@@ -2,7 +2,8 @@ import DateTimePicker, { DateTimePickerEvent } from '@react-native-community/dat
 import { useEffect, useState } from "react";
 import { Text } from "react-native";
 import { PrimaryButton } from '../../elements/primary-button';
-import styled from 'styled-components/native';
+import styled from 'styled-components/native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export function LastPeriodModal(){
     const [ lastPeriodDate, setLastPeriodDate ] = useState(new Date())
@@ -20,8 +21,8 @@ export function LastPeriodModal(){
         setShouldShowDatePicker(true)
     }
 
-    function handleSaveDateFromLastPeriod(){
-
+    async function handleSaveDateFromLastPeriod(){
+        await AsyncStorage.setItem('lastPeriodDate', lastPeriodDate.toISOString())
     }
 
     useEffect(() => {
