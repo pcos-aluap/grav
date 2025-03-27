@@ -5,6 +5,7 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 import { Poppins_700Bold, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
 import { DancingScript_400Regular, DancingScript_600SemiBold } from '@expo-google-fonts/dancing-script';
 import { Home } from './src/screens/home';
+import { WeeklyText } from './src/screens/weekly-text';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ 
