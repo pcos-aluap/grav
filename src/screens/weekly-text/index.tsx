@@ -1,5 +1,6 @@
 import { CaretLeft, CaretRight } from "phosphor-react-native";
 import { View, Text, Image } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context'
 import styled from "styled-components/native";
 
 interface WeeklyTextProps {
@@ -38,7 +39,7 @@ export function WeeklyText(){
     )
 }
 
-const Container = styled.SafeAreaView`
+const Container = styled(SafeAreaView)`
     width: 100%;
     height: 100%;
 
@@ -46,51 +47,52 @@ const Container = styled.SafeAreaView`
     flex-direction: column;
     align-items: center;
 
-    margin: 16px;
+    padding: 24px;
 `
 
 const Header = styled.View`
+    width: 100%;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    padding-inline: 24px;
 `
 
 const Title = styled.Text`
     font-family: ${({theme}) => theme.FONT_FAMILY.title};
     font-size: ${({theme}) => theme.FONT_SIZE.lg}px;
-    color: ${({theme}) => theme.COLORS.dark_gray};
+    color: ${({theme}) => theme.COLORS.textOnContBr_d};
 `
 
 const Card = styled.View`
     width: 70%;
-    height: 30%;
+    height: 128px;
 
-    background: ${({theme}) => theme.COLORS.soft_peach};
+    background: ${({theme}) => theme.COLORS.defaultPrimary_d};
 
     border-radius: 8px;
 
     margin-top: 34px;
+    padding: 24px;
 
-    box-shadow: 2px 2px 8px black;
+    box-shadow: 8px 8px 8px black;
     elevation: 5;
 `
 
 const CardText = styled.Text`
-    color: ${({theme}) => theme.COLORS.medium_gray};
+    color: ${({theme}) => theme.COLORS.textOnContSec_d};
     font-family: ${({theme}) => theme.FONT_FAMILY.body};
     font-size: ${({theme}) => theme.FONT_SIZE.md}px;
 `
 
 const SubTitle = styled.Text`
-    color: ${({theme}) => theme.COLORS.dark_gray};
+    color: ${({theme}) => theme.COLORS.textOnContSec_l};
     font-family: ${({theme}) => theme.FONT_FAMILY.sub_title};
     font-size: ${({theme}) => theme.FONT_SIZE.md}px;
 `
 
 const BodyText = styled.Text`
-    color: ${({theme}) => theme.COLORS.medium_gray};
+    color: ${({theme}) => theme.COLORS.textOnContSec_l};
     font-family: ${({theme}) => theme.FONT_FAMILY.body};
     font-size: ${({theme}) => theme.FONT_SIZE.md}px;
 `
