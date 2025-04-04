@@ -17,11 +17,11 @@ const Container = styled.TouchableOpacity`
     padding-block: 8px;
 
     width: 100%;
-    background: ${({theme}) => theme.COLORS.contTertiary_d};
+    background: ${({theme}) => theme.COLORS.coral};
     border-radius: 8px;
 `
 
 const Title = styled.Text`
-    color: ${({theme}) => theme.COLORS.textOnContTer_l};
+    color: ${({theme}) => theme.COLORS.soft_white};
     font-family: ${({theme}) => theme.FONT_FAMILY.button};
 `

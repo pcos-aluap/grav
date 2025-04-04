@@ -61,14 +61,14 @@ const Header = styled.View`
 const Title = styled.Text`
     font-family: ${({theme}) => theme.FONT_FAMILY.title};
     font-size: ${({theme}) => theme.FONT_SIZE.lg}px;
-    color: ${({theme}) => theme.COLORS.textOnContBr_d};
+    color: ${({theme}) => theme.COLORS.dark_gray};
 `
 
 const Card = styled.View`
     width: 70%;
     height: 128px;
 
-    background: ${({theme}) => theme.COLORS.defaultPrimary_d};
+    background: ${({theme}) => theme.COLORS.soft_white};
 
     border-radius: 8px;
 
@@ -80,19 +80,19 @@ const Card = styled.View`
 `
 
 const CardText = styled.Text`
-    color: ${({theme}) => theme.COLORS.textOnContSec_d};
+    color: ${({theme}) => theme.COLORS.dark_gray};
     font-family: ${({theme}) => theme.FONT_FAMILY.body};
     font-size: ${({theme}) => theme.FONT_SIZE.md}px;
 `
 
 const SubTitle = styled.Text`
-    color: ${({theme}) => theme.COLORS.textOnContSec_l};
+    color: ${({theme}) => theme.COLORS.medium_gray};
     font-family: ${({theme}) => theme.FONT_FAMILY.sub_title};
     font-size: ${({theme}) => theme.FONT_SIZE.md}px;
 `
 
 const BodyText = styled.Text`
-    color: ${({theme}) => theme.COLORS.textOnContSec_l};
+    color: ${({theme}) => theme.COLORS.medium_gray};
     font-family: ${({theme}) => theme.FONT_FAMILY.body};
     font-size: ${({theme}) => theme.FONT_SIZE.md}px;
 `

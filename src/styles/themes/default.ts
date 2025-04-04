@@ -8,6 +8,7 @@ export const defaultTheme = {
         'sky_blue': '#87CEEB',
         'golden_yellow': '#FFD700',
         'coral': '#FF7F50',
+        'soft_white': '#FFF9F5',
         'dark_gray': '#333333',
         'medium_gray': '#555555'
     },

@@ -64,7 +64,7 @@ const Container = styled.View`
 
     border-radius: 8px;
 
-    background: ${({theme}) => theme.COLORS.defaultPrimary_d};
+    background: ${({theme}) => theme.COLORS.soft_white};
 
     gap: 16px;
 `
@@ -73,7 +73,7 @@ const Title = styled.Text`
     display: inline-block;
     width: 100%;
     text-align: center;
-    color: ${({theme}) => theme.COLORS.textOnContPri_d};
+    color: ${({theme}) => theme.COLORS.dark_gray};
     font-family: ${({theme}) => theme.FONT_FAMILY.title};
     font-size: ${({theme}) => theme.FONT_SIZE.lg}px;
 `

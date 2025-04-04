@@ -21,7 +21,7 @@ export default function App() {
     <ThemeProvider theme={defaultTheme}>
       {
         fontsLoaded ?
-        <WeeklyText /> :
+        <Home /> :
         <ActivityIndicator />
       }
     </ThemeProvider>
