@@ -4,6 +4,8 @@ import { Text } from "react-native";
 import { PrimaryButton } from '../../elements/primary-button';
 import styled from 'styled-components/native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import { Input } from '../../elements/input';
+import { CalendarDots } from 'phosphor-react-native';
 
 export function LastPeriodModal(){
     const [ lastPeriodDate, setLastPeriodDate ] = useState(new Date())
@@ -36,6 +38,7 @@ export function LastPeriodModal(){
                 value={textInputValue}
                 placeholder="xx/xx/xxxx"
                 onPress={handleOpenDatePicker}
+                Icon={CalendarDots}
             />
             {
                 shouldShowDatePicker &&
@@ -58,7 +61,7 @@ const Container = styled.View`
     justify-content: center;
 
     width: 90%;
-    height: 30%;
+    height: 280px;
 
     padding: 24px;
 
@@ -76,14 +79,4 @@ const Title = styled.Text`
     color: ${({theme}) => theme.COLORS.dark_gray};
     font-family: ${({theme}) => theme.FONT_FAMILY.title};
     font-size: ${({theme}) => theme.FONT_SIZE.lg}px;
-`
-
-const Input = styled.TextInput`
-    font-family: ${({theme}) => theme.FONT_FAMILY.body};
-
-    font-size: ${({theme}) => theme.FONT_SIZE.md};
-
-    ::placeholder {
-        font-family: ${({theme}) => theme.FONT_FAMILY.body};
-    }
 `
