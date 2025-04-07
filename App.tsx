@@ -5,7 +5,9 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 import { Poppins_700Bold, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
 import { DancingScript_400Regular, DancingScript_600SemiBold } from '@expo-google-fonts/dancing-script';
 import { Home } from './src/screens/home';
+import { NavigationContainer } from '@react-navigation/native';
 import { WeeklyText } from './src/screens/weekly-text';
+import { Navigator } from './src/routes/app.routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ 
@@ -21,7 +23,7 @@ export default function App() {
     <ThemeProvider theme={defaultTheme}>
       {
         fontsLoaded ?
-        <Home /> :
+        <Navigator /> :
         <ActivityIndicator />
       }
     </ThemeProvider>
