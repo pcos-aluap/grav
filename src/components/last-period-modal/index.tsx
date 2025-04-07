@@ -6,11 +6,14 @@ import styled from 'styled-components/native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Input } from '../../elements/input';
 import { CalendarDots } from 'phosphor-react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export function LastPeriodModal(){
     const [ lastPeriodDate, setLastPeriodDate ] = useState(new Date())
     const [ textInputValue, setTextInputValue ] = useState("")
     const [ shouldShowDatePicker, setShouldShowDatePicker ] = useState(false)
+
+    const navigation = useNavigation()
 
     const onChange = (event: DateTimePickerEvent, selectedDate: Date | undefined) => {
         if(selectedDate != undefined){
@@ -25,6 +28,7 @@ export function LastPeriodModal(){
 
     async function handleSaveDateFromLastPeriod(){
         await AsyncStorage.setItem('lastPeriodDate', lastPeriodDate.toISOString())
+        navigation.navigate('WeeklyText')
     }
 
     useEffect(() => {
