@@ -10,22 +10,9 @@ import { WeeklyText } from './src/screens/weekly-text';
 import { Navigator } from './src/routes/app.routes';
 
 export default function App() {
-  const [fontsLoaded] = useFonts({ 
-    Roboto_400Regular,
-    Roboto_700Bold,
-    Poppins_600SemiBold,
-    Poppins_700Bold,
-    DancingScript_400Regular,
-    DancingScript_600SemiBold
-  })
-
   return (
     <ThemeProvider theme={defaultTheme}>
-      {
-        fontsLoaded ?
-        <Navigator /> :
-        <ActivityIndicator />
-      }
+        <Navigator /> 
     </ThemeProvider>
   );
 }
