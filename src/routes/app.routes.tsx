@@ -3,19 +3,24 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Home } from '../screens/home';
 import { WeeklyText } from '../screens/weekly-text';
 
-const Routes = createNativeStackNavigator({
-    initialRouteName: 'Home',
-    screens: {
-        Home: {
-            screen: Home,
-            options: {
-                headerShown: false
-            }
-        },
-        WeeklyText: {
-            screen: WeeklyText
-        }
-    }
-})
+const Stack = createNativeStackNavigator()
 
-export const Navigator = createStaticNavigation(Routes)
+interface NavigatorProps {
+    initialRoute: string
+}
+
+export function Navigator({ initialRoute }: NavigatorProps) {
+    return (
+        <Stack.Navigator initialRouteName={initialRoute}>
+            <Stack.Screen 
+                name="Home"
+                component={Home}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="WeeklyText"
+                component={WeeklyText}
+            />
+        </Stack.Navigator>
+    )
+}
